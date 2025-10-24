@@ -8,7 +8,7 @@ Program sonunda öğrencinin adı, notları, ortalaması ve durumu ekrana yazdı
 Öğrencinin ders başarısını hesaplayan basit bir sistemdir.
 Amaç: koşul yapıları ve aritmetik işlemler konusunu pekiştirmek.
 
-2. Geometrik Hesaplayıcı (30 Puan)
+2. Geometrik Hesaplayıcı 
 Kullanıcıdan bir geometrik şekil seçmesi istenir (kare, dikdörtgen, daire gibi).
 Seçilen şekle göre gerekli ölçüler alınır (örneğin kenar, yarıçap, kısa/uzun kenar).
 Alan ve çevre hesaplamaları yapılır.
@@ -18,7 +18,7 @@ Ekrana seçilen şeklin adı, girilen ölçüler, alan ve çevre değeri yazdır
 Program kullanıcı etkileşimli çalışır (kullanıcı seçtikçe yeni sonuç üretir).
 Amaç: metot, matematiksel işlem, ve seçim yapısı konularını uygulamaktır.
 
-3. Maaş Hesaplama Sistemi (45 Puan)
+3. Maaş Hesaplama Sistemi 
 Kullanıcıdan çalışan bilgileri alınır (ad soyad, brüt maaş, mesai saati, vb).
 Brüt maaş üzerinden mesai ücreti, toplam gelir, kesintiler ve net maaş hesaplanır.
 Kesintiler:
