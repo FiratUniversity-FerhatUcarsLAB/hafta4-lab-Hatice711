@@ -1,24 +1,57 @@
-# Compiled class file
-*.class
+import java.util.Scanner;
+public class OgrenciBilgi2 {
+    public static void main(String[] args) {
 
-# Log file
-*.log
+        Scanner input = new Scanner(System.in);
 
-# BlueJ files
-*.ctxt
+        System.out.print("Adınızı giriniz: ");
+        String ad = input.nextLine();
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+        System.out.print("Soyadınızı giriniz: ");
+        String soyad = input.nextLine();
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+        System.out.print("Ögrenci Numaranız: ");
+        String ogrenci_no = input.nextLine();
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+        System.out.print("Yaşınız: ");
+        String yas = input.nextLine();
+
+        System.out.print("GPA (0.00-4.00): ");
+        float gpa = input.nextFloat();
+
+        // Maskeleme
+        String maskedAd = maskString(ad);
+        String maskedSoyad = maskString(soyad);
+        String maskeOgrNo = maskNumber(ogrenci_no);
+        String maskedGpa = maskGpa(gpa);
+
+        // Ekrana yazdırma
+        System.out.println("=== OGRENCI BILGI SISTEMI ===");
+        System.out.println("Ad Soyad: " + maskedAd + " " + maskedSoyad);
+        System.out.println("Ogrenci No: " + maskeOgrNo);
+        System.out.println("Yaş: " + yas);
+        System.out.println("GPA: " + maskedGpa);
+    }
+
+    // ilk harf gösterir, kalanlar * olur
+    public static String maskString(String str){
+        if (str.length() <=1) return str;
+
+        String starts = "*".repeat(str.length()-1);
+        return str.charAt(0) + starts;
+    }
+
+    // Numaranın ilk iki hanesi görünür, kalanı *
+     public static String maskNumber(String num){
+        if (num.length() <=2) return num;
+
+        String starts = "*".repeat(num.length()-2);
+        return num.substring(0,2) + starts;
+     }
+
+     // GPA nın sadece ilk rakamı görünür sonra ** gelir
+      public static String maskGpa(float gpa){
+        String gpaStr = String.format("%.2f", gpa);
+        return gpaStr.charAt(0) + "**";
+      }
+}
